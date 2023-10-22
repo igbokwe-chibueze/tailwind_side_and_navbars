@@ -2,6 +2,9 @@ import { about, contact, home } from "./assets/icons";  // Importing various ico
 import { useState } from 'react';  // Importing the 'useState' hook from React.
 import { logo } from "./assets/images";
 
+import { Menulist } from "./components"
+
+
 const App = () => {
   // Define a state variable 'toggle' and a function 'setToggle' to update it, initialized with 'false'.
   const [toggle, setToggle] = useState(false);
@@ -13,7 +16,7 @@ const App = () => {
 
         <main className="px-6 py-6 bg-gray-100">
           <header className="mt-2">
-              <h2 className="text-gray-700 text-6xl font-semibold leading-none tracking-wider">Navbars</h2>
+            <h2 className="text-gray-700 text-6xl font-semibold leading-none tracking-wider">Navbars</h2>
           </header>
 
           {/* All Cards */}
@@ -56,25 +59,9 @@ const App = () => {
                   <ul 
                     className={`${
                       !toggle ? "hidden" : "block"  // Conditionally display the menu based on 'toggle' state.
-                    } md:block my-2 mx-2 text-white`}>
-                    <li className="font-bold py-1 rounded hover:bg-gray-800">
-                      <a href="#" className="px-4 flex justify-end focus:border-r-4 border-red-500">
-                        <span>Home</span>
-                        <img className="w-5 ml-2" src={home} alt="home" />
-                      </a>
-                    </li>
-                    <li className="py-1 rounded hover:bg-gray-800">
-                      <a href="#" className="px-4 flex justify-end focus:border-r-4 border-red-500">
-                        <span>About</span>
-                        <img className="w-5 ml-2" src={about} alt="about" />
-                      </a>
-                    </li>
-                    <li className="py-1 rounded hover:bg-gray-800">
-                      <a href="#" className="px-4 flex justify-end focus:border-r-4 border-red-500">
-                        <span>Contact</span>
-                        <img className="w-5 ml-2" src={contact} alt="contact" />
-                      </a>
-                    </li>
+                    } md:block my-2 mx-2 text-white`}
+                  >
+                    <Menulist/>
                   </ul>
                 </nav>
                 {/* Card Body */}
