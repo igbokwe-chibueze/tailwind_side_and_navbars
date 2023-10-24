@@ -19,3 +19,9 @@
       transition-all duration-300 ease-linear 
       focus:bg-gray-700 focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300
 }
+
+.addBtn{
+  @apply inline-flex p-1 bg-blue-700 text-gray-100 font-bold rounded items-center space-x-2
+      hover:text-white hover:bg-blue-500
+      transition-all duration-300 ease-linear
+}

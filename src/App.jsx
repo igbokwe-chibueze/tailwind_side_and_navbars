@@ -1,7 +1,7 @@
 import { useState } from 'react';  // Importing the 'useState' hook from React.
 import { logo } from "./assets/images";
 
-import { Menulist, Menulist2,  Menulist3, ProfileList} from "./components"
+import { Menulist, Menulist2,  Menulist3, ProfileList, ProfileList2} from "./components"
 
 
 const App = () => {
@@ -128,26 +128,23 @@ const App = () => {
                   <div className='flex justify-between items-center md:p-2'>
                     {/* Hamburger, Logo & Menu */}
                     <div className='md:flex md:items-center'>
-                      {/* Hamburger & Logo */}
-                      <div className='mr-2 flex justify-between items-center'>
-                        {/* Hamburger */}
-                        <div className="cursor-pointer md:hidden mr-2">
-                          <button type="button"
-                            onClick={() => setToggle3(!toggle3)}  // Toggle the 'toggle' state when the icon is clicked.
-                            className="hamburgerBtn"
-                          >
-                            {/* Hamburger svg & close svg*/}
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                              {toggle3 ? (
-                                // Render the first path(close) when toggle is true
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                              ) : (
-                                // Render the second path(Hamburger) when toggle is false
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
-                              )}
-                            </svg>
-                          </button>
-                        </div>
+                      {/* Hamburger */}
+                      <div className="md:hidden">
+                        <button type="button"
+                          onClick={() => setToggle3(!toggle3)}  // Toggle the 'toggle' state when the icon is clicked.
+                          className="hamburgerBtn"
+                        >
+                          {/* Hamburger svg & close svg*/}
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                            {toggle3 ? (
+                              // Render the first path(close) when toggle is true
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            ) : (
+                              // Render the second path(Hamburger) when toggle is false
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                            )}
+                          </svg>
+                        </button>
                       </div>
                       {/* Logo & Menu area (Large Screens): Shows on Large screens only */}
                       <div className='hidden md:flex items-center text-white'>
@@ -167,11 +164,11 @@ const App = () => {
                     
                     {/* Profile & Notification Btn */}
                     <div className='flex items-center space-x-2'>
-                      <button type="button" className='notificationBtn'>
+                      {/* <button type="button" className='notificationBtn'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
                         </svg>
-                      </button>
+                      </button> */}
                       <ProfileList/>
                     </div>
                   </div>
@@ -183,6 +180,89 @@ const App = () => {
                     } md:hidden my-2 text-white`}
                   >
                     <Menulist3/>
+                  </div>
+                </nav>
+                {/* Card Body */}
+                <div className="bg-gray-300 h-36">
+                </div>
+              </div>
+
+
+              {/* Card Four */}
+              <div className='card grid'>
+                <h4 className="mb-2 font-bold text-gray-700">Nav Four</h4>
+                {/* Card Nav */}
+                <nav className='bg-gray-800 '>
+                  <div className='flex justify-between items-center m-2 md:p-2'>
+                    {/* Hamburger, Logo & Menu */}
+                    <div className='md:flex md:items-center'>
+                      {/* Hamburger & Logo */}
+                      <div className="flex justify-between items-center space-x-2 md:hidden">
+                        {/* Hamburger */}
+                        <button type="button"
+                          onClick={() => setToggle3(!toggle3)}  // Toggle the 'toggle' state when the icon is clicked.
+                          className="hamburgerBtn"
+                        >
+                          {/* Hamburger svg & close svg*/}
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                            {toggle3 ? (
+                              // Render the first path(close) when toggle is true
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            ) : (
+                              // Render the second path(Hamburger) when toggle is false
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                            )}
+                          </svg>
+                        </button>
+                        {/* Logo */}
+                        <a href='#'>
+                          <img src={logo} alt='logo' className="h-6"/>
+                        </a>
+                      </div>
+                      {/* Logo & Menu area (Large Screens): Shows on Large screens only */}
+                      <div className='hidden md:flex items-center text-white'>
+                        <a href='#'>
+                          <img src={logo} alt='logo' className="h-6"/>
+                        </a>
+                        <Menulist3/>
+                      </div>
+                    </div>
+                    
+                    {/* New Job Btn, Profile & Notification Btn */}
+                    <div className='flex items-center space-x-2'>
+                      {/* New Job Btn */}
+                      <button type="button" className='addBtn'>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                        <span>New Job</span>
+                      </button>
+                      {/* Notification Btn & Profile */}
+                      <div className='hidden md:flex items-center space-x-2'>
+                        {/* Notification Btn */}
+                        {/* <button type="button" className='notificationBtn'>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                          </svg>
+                        </button> */}
+                        {/* Profile*/}
+                        <ProfileList/>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Menu area (Mobile): Shows on mobile screens only */}
+                  <div 
+                    className={`${
+                      !toggle3 ? "hidden" : "block"  // Conditionally display the menu based on 'toggle' state.
+                    } md:hidden text-white`}
+                  >
+                    <div className='px-2'>
+                      <Menulist3/>
+                    </div>
+                    <div>
+                      <ProfileList2/>
+                    </div>
                   </div>
                 </nav>
                 {/* Card Body */}
