@@ -3,6 +3,7 @@ import { about, contact, home } from "../assets/icons";  // Importing various ic
 const Menulist = () => {
   return (
     <div>
+      <ul className="text-white">
         <li className="font-bold py-1 rounded hover:bg-gray-700">
             <a href="#" className="px-4 flex justify-end focus:border-r-4 border-red-500">
               <span>Home</span>
@@ -21,6 +22,7 @@ const Menulist = () => {
               <img className="w-5 ml-2" src={contact} alt="contact" />
             </a>
         </li>
+      </ul>
     </div>
 
   )

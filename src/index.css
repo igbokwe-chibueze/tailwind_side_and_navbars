@@ -25,3 +25,10 @@
       hover:text-white hover:bg-blue-500
       transition-all duration-300 ease-linear
 }
+
+
+.searchLabel{
+  @apply py-1 pl-9 pr-3 w-full rounded bg-gray-700 shadow-sm
+        placeholder:italic placeholder:text-gray-400
+        focus:outline-none focus:bg-white
+}
