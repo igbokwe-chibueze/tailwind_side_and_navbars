@@ -1,9 +1,9 @@
 import { about, contact, home } from "../assets/icons";  // Importing various icons from a file.
 
-const Menulist3 = () => {
+const Menulist5 = () => {
   return (
     <div>
-      <ul className="md:flex space-y-1 md:space-y-0 md:mx-6 md:space-x-2 text-white">
+      <ul className="md:flex space-y-1 md:space-y-0 md:mx-6 md:space-x-2">
         {/*  
         Applying flex-row-reverse to anchor tags reverses child order, showing images before spans.
         justify reverses too, with justify-end now acting as justify-start and vice versa.
@@ -34,4 +34,4 @@ const Menulist3 = () => {
   )
 }
 
-export default Menulist3
+export default Menulist5
