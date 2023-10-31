@@ -1,6 +1,6 @@
 import { profile } from "../assets/images";
 
-const ProfileList = () => {
+const ProfileList2 = () => {
 
     return (
         <div className='mt-2 border-t pl-2 border-gray-700'>
@@ -32,13 +32,13 @@ const ProfileList = () => {
             <ul 
                 className="my-2 space-y-1 text-gray-400"
             >
-                <li className='px-2 py-1 rounded hover:bg-gray-700 hover:text-white'>
+                <li className='px-2 py-1 rounded hover:bg-gray-700 dark:hover:bg-rose-700 hover:text-white'>
                     <a href="#">Profile</a>
                 </li>
-                <li className='px-2 py-1 rounded hover:bg-gray-700 hover:text-white'>
+                <li className='px-2 py-1 rounded hover:bg-gray-700 dark:hover:bg-rose-700 hover:text-white'>
                     <a href="#">Settings</a>
                 </li>
-                <li className='px-2 py-1 rounded hover:bg-gray-700 hover:text-white'>
+                <li className='px-2 py-1 rounded hover:bg-gray-700 dark:hover:bg-rose-700 hover:text-white'>
                     <a href="#">Signout</a>
                 </li>
             </ul>
@@ -46,4 +46,4 @@ const ProfileList = () => {
     )
 }
 
-export default ProfileList;
+export default ProfileList2;

@@ -65,15 +65,15 @@ const ProfileList = () => {
             <ul 
                 className={`${
                     !profileToggle ? "hidden" : "block"  // Conditionally display the profile based on 'toggle' state.
-                } absolute right-0 mt-2 w-48 py-1 bg-white rounded-lg text-gray-800 shadow-lg overflow-hidden`}
+                } absolute right-0 mt-2 w-48 py-1 bg-white dark:bg-rose-200 rounded-lg text-gray-800 shadow-lg overflow-hidden`}
             >
-                <li className='px-4 py-2 hover:bg-gray-300'>
+                <li className='px-4 py-2 hover:bg-gray-300 dark:hover:bg-rose-300'>
                     <a href="#">Profile</a>
                 </li>
-                <li className='px-4 py-2 hover:bg-gray-300'>
+                <li className='px-4 py-2 hover:bg-gray-300 dark:hover:bg-rose-300'>
                     <a href="#">Settings</a>
                 </li>
-                <li className='px-4 py-2 hover:bg-gray-300'>
+                <li className='px-4 py-2 hover:bg-gray-300 dark:hover:bg-rose-300'>
                     <a href="#">Signout</a>
                 </li>
             </ul>
