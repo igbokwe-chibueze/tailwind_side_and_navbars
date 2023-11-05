@@ -1,12 +1,50 @@
 import { logo } from "./assets/images";
 import { NavLinksList, NavLinksList2, Menu, Menu2, Menu3, Menu4, ProfileList, SearchBar, NavEight } from "./components";
+import { motion } from "framer-motion";
+
+//Slide in all the cards from the bottom of the screen
+const cardVarients = {
+    hidden: {
+      y: '100vh'
+    },
+    visible: {
+      y: 0,
+      transition: {
+        delay: 0.6,
+        type: 'tween', 
+        duration: 1,
+        staggerChildren: 0.5, // Ensures the children cards come in one after the other.
+        when: "beforeChildren" //complete this animation before starting childrens animation.
+      }
+    }
+}
+
+//Controls how individual cards slides into view
+const childrenVarients = {
+    hidden: {
+      y: '100vw'
+    },
+    visible: {
+      y: 0,
+      transition: {
+        type: 'tween', 
+        duration: 1,
+      }
+    }
+}
 
 const Navs = () => {
   return (
-    <div className="grid px-6 py-10 gap-10">
+    <motion.div className="grid px-6 py-10 gap-10"
+    variants={cardVarients}
+    initial="hidden"
+    animate="visible"
+    >
 
         {/* Card One */}
-        <div className="card grid">
+        <motion.div className="card grid"
+            variants={childrenVarients}
+        >
             <h4 className="mb-2 font-bold text-gray-700 dark:text-slate-300"> Nav One</h4>
             <nav className="p-2 bg-gray-800 dark:bg-rose-800 flex justify-between items-center">
                 {/* Logo */}
@@ -43,11 +81,13 @@ const Navs = () => {
                     anim id est laborum. <span className="font-bold">End</span>
                 </span>
             </div>
-        </div>
+        </motion.div>
 
         
         {/* Card Two */}
-        <div className="card grid">
+        <motion.div className="card grid"
+            variants={childrenVarients}
+        >
             <h4 className="mb-2 font-bold text-gray-700 dark:text-slate-300"> Nav Two</h4>
             <nav className="p-2 bg-gray-800 dark:bg-rose-800 flex justify-between items-center">
                 {/* Menu, Logo & NavLinks */}
@@ -95,11 +135,13 @@ const Navs = () => {
                     anim id est laborum. <span className="font-bold">End</span>
                 </span>
             </div>
-        </div>
+        </motion.div>
 
         
         {/* Card Three */}
-        <div className="card grid">
+        <motion.div className="card grid"
+            variants={childrenVarients}
+        >
             <h4 className="mb-2 font-bold text-gray-700 dark:text-slate-300"> Nav Three</h4>
             <nav className="p-2 bg-gray-800 dark:bg-rose-800 flex justify-between items-center">
                 {/* Menu, Logo & NavLinks */}
@@ -152,11 +194,13 @@ const Navs = () => {
                     anim id est laborum. <span className="font-bold">End</span>
                 </span>
             </div>
-        </div>
+        </motion.div>
 
 
         {/* Card Four */}
-        <div className="card grid">
+        <motion.div className="card grid"
+            variants={childrenVarients}
+        >
             <h4 className="mb-2 font-bold text-gray-700 dark:text-slate-300"> Nav Four</h4>
             <nav className="p-2 bg-gray-800 dark:bg-rose-800 flex justify-between items-center">
                 {/* Logo & NavLinks */}
@@ -202,11 +246,13 @@ const Navs = () => {
                     anim id est laborum. <span className="font-bold">End</span>
                 </span>
             </div>
-        </div>
+        </motion.div>
 
 
         {/* Card Five */}
-        <div className="card grid">
+        <motion.div className="card grid"
+            variants={childrenVarients}
+        >
             <h4 className="mb-2 font-bold text-gray-700 dark:text-slate-300"> Nav Five</h4>
             <nav className="p-2 bg-gray-800 dark:bg-rose-800 flex justify-between items-center">
                 {/* Logo & NavLinks */}
@@ -262,11 +308,13 @@ const Navs = () => {
                     anim id est laborum. <span className="font-bold">End</span>
                 </span>
             </div>
-        </div>
+        </motion.div>
 
 
         {/* Card Six */}
-        <div className="card grid">
+        <motion.div className="card grid"
+            variants={childrenVarients}
+        >
             <h4 className="mb-2 font-bold text-gray-700 dark:text-slate-300"> Nav Six</h4>
             <nav className="p-2 bg-gray-800 dark:bg-rose-800">
                 {/* Logo, Search, Menu & Profile */}
@@ -320,11 +368,13 @@ const Navs = () => {
                     anim id est laborum. <span className="font-bold">End</span>
                 </span>
             </div>
-        </div>
+        </motion.div>
 
 
         {/* Card Seven */}
-        <div className="card grid md:grid-cols-8">
+        <motion.div className="card grid md:grid-cols-8"
+            variants={childrenVarients}
+        >
             <h4 className="mb-2 font-bold text-gray-700 dark:text-slate-300 md:col-span-8"> Nav Seven</h4>
             <nav className="p-2 bg-gray-800 dark:bg-rose-800 flex justify-between items-center md:block md:col-span-1">
                 {/* Logo */}
@@ -361,18 +411,20 @@ const Navs = () => {
                     anim id est laborum. <span className="font-bold">End</span>
                 </span>
             </div>
-        </div>
+        </motion.div>
 
 
         {/* Card Eight */}
-        <div className="card grid">
+        <motion.div className="card grid"
+            variants={childrenVarients}
+        >
             <h4 className="mb-2 font-bold text-gray-700 dark:text-slate-300"> Nav Eight</h4>
             <nav className="h-screen flex justify-center items-center bg-gray-900 dark:bg-white">
                 <NavEight />
             </nav>
-        </div>
+        </motion.div>
 
-    </div>
+    </motion.div>
   )
 }
 

@@ -15,18 +15,16 @@ const NavEight = () => {
     <div className="bg-white dark:bg-gray-900 h-auto px-6 rounded-t-xl">
         <ul className="flex relative">
           <span
-            className={`bg-rose-600 duration-500 ${links[active].anim} border-4 border-gray-900 dark:border-white h-16 w-16 absolute
+            className={`bg-green-600 duration-500 ${links[active].anim} border-4 border-gray-900 dark:border-white h-16 w-16 absolute
           -top-5 rounded-full`}
           >
             <span
             className="w-3.5 h-3.5 bg-transparent absolute top-4 -left-[18px] 
             rounded-tr-[11px] shadow-myShadow1Dark dark:shadow-myShadow1White"
-            //style={{ boxShadow: `4.1px -5px 0 0  rgb(17,24,39)` }}
             ></span>
             <span
               className="w-3.5 h-3.5 bg-transparent absolute top-4 -right-[18px] 
             rounded-tl-[11px] shadow-myShadow2Dark dark:shadow-myShadow2White"
-            //style={{ boxShadow: `-4.1px -5px 0 0  rgb(17,24,39)` }}
             ></span>
             </span>
           {links.map((menu, i) => (

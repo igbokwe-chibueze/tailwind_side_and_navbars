@@ -28,7 +28,7 @@ const Menu = () => {
 
   return (
     <div className="">
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center space-x-2" >
         {/* Hamburger */}
         <div className='md:hidden'>
           <button type="button"
@@ -64,10 +64,10 @@ const Menu = () => {
       </div>
 
       {/* Menu List area */}
-      <div 
+      <div
         className={`${
               !menuToggle ? "hidden" : "block"  // Conditionally display the menu based on 'toggle' state.
-          } absolute right-0 mt-4 w-full pt-2 pb-4 z-10 bg-gray-800 dark:bg-rose-800 opacity-95 shadow-lg 
+          } flex justify-end absolute right-0 mt-4 w-full pt-2 pb-4 z-10 bg-gray-800 dark:bg-rose-800 opacity-95 shadow-lg 
           sm:w-1/2 sm:h-screen sm:mt-8 sm:top-0 sm:py-8 sm:shadow-2xl`} // On a real project, set "sm:mt-0"
       >
         <ul className="py-2">
@@ -84,7 +84,7 @@ const Menu = () => {
             </li>
           ))}
         </ul>
-      </div>    
+      </div>
     </div>
   )
 }

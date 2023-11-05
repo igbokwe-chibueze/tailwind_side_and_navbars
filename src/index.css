@@ -7,10 +7,15 @@
 }
 
 .hamburgerBtn{
-  @apply block p-1 text-gray-400 dark:text-slate-300 rounded 
+  @apply block p-1 text-gray-600 dark:text-slate-300 rounded 
       hover:text-white dark:hover:text-white hover:bg-gray-700 dark:hover:bg-rose-700 hover:rounded-lg 
       transition-all duration-300 ease-linear 
       focus:bg-gray-700 dark:focus:bg-rose-700 focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-rose-300
+}
+
+.hamburgerBtn2{
+  @apply block p-1 text-gray-400 dark:text-slate-300 rounded 
+      hover:text-white dark:hover:text-white
 }
 
 .notificationBtn{
@@ -31,4 +36,8 @@
   @apply py-1 pl-9 pr-3 w-full rounded bg-gray-700 dark:bg-slate-300 shadow-sm
         placeholder:italic placeholder:text-gray-400 dark:placeholder:text-slate-500
         focus:outline-none focus:bg-white dark:focus:bg-slate-100
+}
+
+.github_btn {
+  @apply rounded-full border border-black bg-black dark:bg-white py-1.5 px-2 text-sm text-white dark:text-black;
 }
