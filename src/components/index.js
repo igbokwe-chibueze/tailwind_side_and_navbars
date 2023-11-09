@@ -16,6 +16,8 @@ import ThemeSwitcher from "./ThemeSwitcher"
 
 import NavEight from "./NavEight"
 
+import ContactBtn from "./ContactBtn"
+
 export {
     NavLinksList,
     NavLinksList2,
@@ -35,4 +37,6 @@ export {
     ThemeSwitcher,
 
     NavEight,
+
+    ContactBtn,
 }
