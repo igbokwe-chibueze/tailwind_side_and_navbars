@@ -1,5 +1,4 @@
 import { useRef } from "react"
-import { useState } from "react"
 import PropTypes from "prop-types";
 
 const ContactBtn = ({ 
@@ -10,26 +9,23 @@ const ContactBtn = ({
     borderColor,
     ...props 
 }) => {
-  const [hovered, setHovered] = useState(false)
   const ref = useRef(null)
 
   return (
     <button
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
       className={`
         flex p-2 items-center rounded-lg
         text-white ${
             backgroundColor
               ? `${backgroundColor} ${textColor} ${borderColor}`
               : "bg-gray-600 border-2 border-gray-500 "
-          } rounded-full`}
+          } rounded-full relative group`}
       
       {...props}
     >
       {children}
       <div
-        className={`${hovered ? "" : "hidden"} `}
+        className="hidden group-hover:flex"
       >
         <span ref={ref} className="px-1.5">
           {text}
