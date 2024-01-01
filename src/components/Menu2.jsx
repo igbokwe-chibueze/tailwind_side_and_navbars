@@ -11,7 +11,7 @@ const menuVariant = {
     },
   },
   closed: {
-    clipPath: "circle(23px at 25px 25px)",
+    clipPath: "circle(23px at 28px 28px)",
     transition: {
       delay: 0.3,
       type: "spring",
