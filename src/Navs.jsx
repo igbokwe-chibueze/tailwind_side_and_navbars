@@ -89,7 +89,7 @@ const Navs = () => {
             variants={childrenVarients}
         >
             <h4 className="mb-2 font-bold text-gray-700 dark:text-slate-300"> Nav Two</h4>
-            <nav className="p-2 bg-gray-800 dark:bg-rose-800 flex justify-between items-center">
+            <nav className="p-3 bg-gray-800 dark:bg-rose-800 flex justify-between items-center">
                 {/* Menu, Logo & NavLinks */}
                 <div className="md:flex md:items-center">
                     {/* Menu (Mobile): Shows on mobile screens only */}
